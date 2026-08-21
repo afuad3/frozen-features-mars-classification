@@ -1,0 +1,37 @@
+# Frozen feature-extractor configuration
+# All models are used FROZEN (eval mode, no grad, no fine-tuning).
+
+resnet50:
+  kind: torchvision_resnet50
+  display_name: "ResNet-50 (ImageNet)"
+  role: "conventional CNN baseline"
+  weights_enum: "ResNet50_Weights.IMAGENET1K_V1"   # classic ImageNet-1k weights
+  embedding_dim: 2048                               # penultimate global-avg-pool (fc removed)
+  feature: "global_avgpool"
+  preprocessing: resnet_imagenet
+
+dinov2:
+  kind: hf_dinov2
+  display_name: "DINOv2 (ViT-B/14)"
+  role: "self-supervised foundation model"
+  hf_checkpoint: "facebook/dinov2-base"
+  embedding_dim: 768
+  feature: "cls_token"                              # pooler_output / CLS
+  preprocessing: dinov2_processor
+
+clip:
+  kind: hf_clip
+  display_name: "CLIP (ViT-B/16)"
+  role: "vision-language foundation model (image tower)"
+  hf_checkpoint: "openai/clip-vit-base-patch16"
+  embedding_dim: 512
+  feature: "image_embeds"                           # get_image_features
+  preprocessing: clip_processor
+
+# Candidate domain-specific 4th model - DOCUMENTED ONLY (not run by default).
+# Filled in by the report after provenance/license/checkpoint verification.
+domain_candidates:
+  - name: "SatMAE / Prithvi / Clay (remote-sensing FM)"
+    status: "candidate - verify checkpoint, license, input format before use"
+  - name: "Mars-specific FM"
+    status: "candidate - verify public checkpoint + inference code before use"

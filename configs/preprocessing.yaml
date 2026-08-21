@@ -1,0 +1,44 @@
+# Deterministic, model-specific preprocessing
+# NO random augmentation anywhere in embedding extraction (§11).
+# Grayscale HiRISE images -> 3-channel replication (no artificial colorization).
+
+version: "preproc-v1"
+
+# ResNet-50 (torchvision convention).
+resnet_imagenet:
+  resize: 256          # shorter side
+  center_crop: 224
+  interpolation: "bilinear"
+  to_rgb: "replicate"  # 1->3 channel replication for grayscale
+  normalize:
+    mean: [0.485, 0.456, 0.406]
+    std:  [0.229, 0.224, 0.225]
+
+# DINOv2 - authoritative transform comes from the HF AutoImageProcessor for the checkpoint.
+# Values below document the expected defaults and are cross-checked at load time.
+dinov2_processor:
+  source: "transformers.AutoImageProcessor.from_pretrained('facebook/dinov2-base')"
+  expected_crop: 224   # patch14 -> 16x16 tokens
+  interpolation: "bicubic"
+  to_rgb: "replicate"
+  normalize:
+    mean: [0.485, 0.456, 0.406]
+    std:  [0.229, 0.224, 0.225]
+
+# CLIP - authoritative transform comes from the HF CLIPImageProcessor for the checkpoint.
+clip_processor:
+  source: "transformers.CLIPImageProcessor.from_pretrained('openai/clip-vit-base-patch16')"
+  expected_crop: 224
+  interpolation: "bicubic"
+  to_rgb: "replicate"
+  normalize:
+    mean: [0.48145466, 0.4578275, 0.40821073]
+    std:  [0.26862954, 0.26130258, 0.27577711]
+
+# Post-extraction storage: store RAW embeddings AND an L2-normalized copy.
+# The classifier pipeline applies StandardScaler(fit on train) -> LogisticRegression,
+# identically for every model. The L2-normalized copy is used for kNN/retrieval (cosine).
+storage:
+  save_raw: true
+  save_l2_normalized: true
+  dtype: "float32"

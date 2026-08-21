@@ -1,0 +1,7 @@
+Dataset,Model,Embedding dimension,Classifier,Accuracy,Balanced Accuracy,Macro-F1,Weighted-F1,Macro Precision,Macro Recall,Selected C,class_weight
+HIRISE,resnet50,2048,"Logistic (multinomial, L2)",0.879,0.6832,0.6083,0.8759,0.5626,0.6832,0.01,balanced
+HIRISE,dinov2,768,"Logistic (multinomial, L2)",0.8974,0.8344,0.7137,0.9042,0.6858,0.8344,0.01,balanced
+HIRISE,clip,512,"Logistic (multinomial, L2)",0.9147,0.8278,0.7367,0.9193,0.703,0.8278,0.1,balanced
+MSL,resnet50,2048,"Logistic (multinomial, L2)",0.7433,0.5999,0.558,0.7381,0.5987,0.5999,10.0,balanced
+MSL,dinov2,768,"Logistic (multinomial, L2)",0.795,0.6276,0.5977,0.7824,0.6349,0.6276,0.01,
+MSL,clip,512,"Logistic (multinomial, L2)",0.7617,0.6326,0.595,0.7652,0.6132,0.6326,0.1,balanced

@@ -1,0 +1,161 @@
+{
+  "model": "dinov2",
+  "spec": [
+    {
+      "query_path": "data/msl/extracted/msl-labeled-data-set-v2.1/images/1940MR0101390270901048D01_DRCL.jpg",
+      "query_label": "Nearby surface",
+      "neighbors": [
+        {
+          "path": "data/msl/extracted/msl-labeled-data-set-v2.1/images/0728MR0031190060402954E01_DRCL.jpg",
+          "label": "Nearby surface"
+        },
+        {
+          "path": "data/msl/extracted/msl-labeled-data-set-v2.1/images/0297MR0012430300203613E01_DRCL.jpg",
+          "label": "Nearby surface"
+        },
+        {
+          "path": "data/msl/extracted/msl-labeled-data-set-v2.1/images/0864ML0038020040401671E01_DRCL.jpg",
+          "label": "Nearby surface"
+        },
+        {
+          "path": "data/msl/extracted/msl-labeled-data-set-v2.1/images/0837ML0036750060401312D01_DRCL.jpg",
+          "label": "Nearby surface"
+        },
+        {
+          "path": "data/msl/extracted/msl-labeled-data-set-v2.1/images/0164ML0008820020104613E01_DRCL.jpg",
+          "label": "Nearby surface"
+        }
+      ]
+    },
+    {
+      "query_path": "data/msl/extracted/msl-labeled-data-set-v2.1/images/2009MR0105800000902393E01_DRCL.jpg",
+      "query_label": "Nearby surface",
+      "neighbors": [
+        {
+          "path": "data/msl/extracted/msl-labeled-data-set-v2.1/images/0138MR0008190650201079E01_DRCL.jpg",
+          "label": "Nearby surface"
+        },
+        {
+          "path": "data/msl/extracted/msl-labeled-data-set-v2.1/images/0153MR0008470020201244E01_DRCL.jpg",
+          "label": "Nearby surface"
+        },
+        {
+          "path": "data/msl/extracted/msl-labeled-data-set-v2.1/images/0137MR0008170550200988E01_DRCL.jpg",
+          "label": "Nearby surface"
+        },
+        {
+          "path": "data/msl/extracted/msl-labeled-data-set-v2.1/images/0817ML0036020010401088E01_DRCL.jpg",
+          "label": "Nearby surface"
+        },
+        {
+          "path": "data/msl/extracted/msl-labeled-data-set-v2.1/images/0153MR0008470070201249E01_DRCL.jpg",
+          "label": "Nearby surface"
+        }
+      ]
+    },
+    {
+      "query_path": "data/msl/extracted/msl-labeled-data-set-v2.1/images/2016ML0106340080800132C00_DRCL.jpg",
+      "query_label": "Layers",
+      "neighbors": [
+        {
+          "path": "data/msl/extracted/msl-labeled-data-set-v2.1/images/0319ML0013060170107674E01_DRCL.jpg",
+          "label": "Layers"
+        },
+        {
+          "path": "data/msl/extracted/msl-labeled-data-set-v2.1/images/0319MR0013060050300810E01_DRCL.jpg",
+          "label": "Float"
+        },
+        {
+          "path": "data/msl/extracted/msl-labeled-data-set-v2.1/images/0721MR0030860110402827E01_DRCL.jpg",
+          "label": "Nearby surface"
+        },
+        {
+          "path": "data/msl/extracted/msl-labeled-data-set-v2.1/images/0540ML0021310730203638E01_DRCL.jpg",
+          "label": "Nearby surface"
+        },
+        {
+          "path": "data/msl/extracted/msl-labeled-data-set-v2.1/images/0609ML0025690050301555E01_DRCL.jpg",
+          "label": "Nearby surface"
+        }
+      ]
+    },
+    {
+      "query_path": "data/msl/extracted/msl-labeled-data-set-v2.1/images/1964ML0102720080605426E01_DRCL.jpg",
+      "query_label": "Nearby surface",
+      "neighbors": [
+        {
+          "path": "data/msl/extracted/msl-labeled-data-set-v2.1/images/0778ML0033700330400238E01_DRCL.jpg",
+          "label": "Nearby surface"
+        },
+        {
+          "path": "data/msl/extracted/msl-labeled-data-set-v2.1/images/0440ML0018030090201754E01_DRCL.jpg",
+          "label": "Nearby surface"
+        },
+        {
+          "path": "data/msl/extracted/msl-labeled-data-set-v2.1/images/0108ML0006830340103278E01_DRCL.jpg",
+          "label": "Nearby surface"
+        },
+        {
+          "path": "data/msl/extracted/msl-labeled-data-set-v2.1/images/0120ML0007520210103787E01_DRCL.jpg",
+          "label": "Nearby surface"
+        },
+        {
+          "path": "data/msl/extracted/msl-labeled-data-set-v2.1/images/0111ML0006870300103597E01_DRCL.jpg",
+          "label": "Nearby surface"
+        }
+      ]
+    },
+    {
+      "query_path": "data/msl/extracted/msl-labeled-data-set-v2.1/images/2000MR0104890030902181I01_DRCL.jpg",
+      "query_label": "Nearby surface",
+      "neighbors": [
+        {
+          "path": "data/msl/extracted/msl-labeled-data-set-v2.1/images/0066MR0002930320103310E01_DRCL.jpg",
+          "label": "Nearby surface"
+        },
+        {
+          "path": "data/msl/extracted/msl-labeled-data-set-v2.1/images/0315MR0012920010300407E01_DRCL.jpg",
+          "label": "Nearby surface"
+        },
+        {
+          "path": "data/msl/extracted/msl-labeled-data-set-v2.1/images/0188ML0010090320105670E01_DRCL.jpg",
+          "label": "Nearby surface"
+        },
+        {
+          "path": "data/msl/extracted/msl-labeled-data-set-v2.1/images/0080MR0005940430104050I01_DRCL.jpg",
+          "label": "Nearby surface"
+        },
+        {
+          "path": "data/msl/extracted/msl-labeled-data-set-v2.1/images/0468ML0018660540202057C00_DRCL.jpg",
+          "label": "Nearby surface"
+        }
+      ]
+    },
+    {
+      "query_path": "data/msl/extracted/msl-labeled-data-set-v2.1/images/2023MR0106790110902875D01_DRCL.jpg",
+      "query_label": "Mastcam cal target",
+      "neighbors": [
+        {
+          "path": "data/msl/extracted/msl-labeled-data-set-v2.1/images/0943MR0041420100501962D01_DRCL.jpg",
+          "label": "Mastcam cal target"
+        },
+        {
+          "path": "data/msl/extracted/msl-labeled-data-set-v2.1/images/0771MR0033110090403879D01_DRCL.jpg",
+          "label": "Mastcam cal target"
+        },
+        {
+          "path": "data/msl/extracted/msl-labeled-data-set-v2.1/images/0782MR0034140090204168D01_DRCL.jpg",
+          "label": "Mastcam cal target"
+        },
+        {
+          "path": "data/msl/extracted/msl-labeled-data-set-v2.1/images/0725MR0030970130402873D01_DRCL.jpg",
+          "label": "Mastcam cal target"
+        },
+        {
+          "path": "data/msl/extracted/msl-labeled-data-set-v2.1/images/0172MR0009280080201667E01_DRCL.jpg",
+          "label": "Mastcam cal target"
+        }
+      ]
+    }
+  ]
+}

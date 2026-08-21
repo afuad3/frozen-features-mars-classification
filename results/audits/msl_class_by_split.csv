@@ -1,0 +1,20 @@
+class_name,test,train,val
+Arm cover,4,5,1
+Artifact,132,212,62
+Close-up rock,84,239,50
+DRT,6,4,4
+DRT spot,7,39,1
+Distant landscape,34,149,14
+Drill hole,12,48,5
+Float,1,74,5
+Layers,17,67,21
+Light-toned veins,27,11,4
+Mastcam cal target,29,59,12
+Nearby surface,187,747,74
+Night sky,4,16,3
+Other rover part,10,65,11
+Sand,16,88,19
+Sun,19,91,5
+Wheel,5,46,5
+Wheel joint,5,27,1
+Wheel tracks,1,11,3

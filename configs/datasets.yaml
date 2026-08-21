@@ -1,0 +1,90 @@
+# Dataset configuration
+# Paths are relative to the project root unless absolute.
+
+seed: 42
+
+hirise:
+  name: HiRISE
+  full_name: "Mars orbital image (HiRISE) labeled data set version 3.2"
+  zenodo_record: "4002935"
+  zenodo_doi: "10.5281/zenodo.4002935"
+  # Primary archive on the record (verified at download time).
+  archive_filename: "hirise-map-proj-v3_2.zip"
+  raw_dir: "data/hirise/raw"
+  extract_dir: "data/hirise/extracted"
+  # Files inside the extracted dataset:
+  images_subdir: "map-proj-v3_2"                       # JPG landmark crops (227x227)
+  labels_all: "labels-map-proj_v3_2.txt"               # columns: filename class_id (verified)
+  split_file: "labels-map-proj_v3_2_train_val_test.txt" # columns: filename class_id set (verified)
+  class_map: "landmarks_map-proj-v3_2_classmap.csv"    # class_id -> semantic name
+  num_classes: 8
+  # Class ids per the released classmap (verified during audit against the actual file).
+  class_names:
+    0: "Other"
+    1: "Crater"
+    2: "Dark dune"
+    3: "Slope streak"
+    4: "Bright dune"
+    5: "Impact ejecta"
+    6: "Swiss cheese"
+    7: "Spider"
+  image_size_native: 227          # released crops are 227x227
+  channels_expected: 1            # HiRISE is single-band; verified during audit
+  # Expected released split counts at the ORIGINAL-LANDMARK level (asserted by audit).
+  expected_landmark_counts:
+    train: 6997
+    val: 2025
+    test: 1793
+    total: 10815
+  expected_image_counts:
+    total_released: 64947
+  # Originals-only policy: for train/val we keep exactly ONE (unaugmented) image per landmark.
+  originals_only: true
+  # Source-image id parsed from filename prefix (e.g. "ESP_016287_2205_..." -> "ESP_016287_2205").
+  source_id_regex: '^([A-Z]{3}_\d{6}_\d{4})'
+
+msl:
+  name: MSL
+  full_name: "Mars surface image (Curiosity rover) labeled data set version 2.1"
+  zenodo_record: "4033453"
+  zenodo_doi: "10.5281/zenodo.4033453"
+  archive_filename: "msl-labeled-data-set-v2.1.zip"
+  raw_dir: "data/msl/raw"
+  extract_dir: "data/msl/extracted"
+  images_subdir: "images"                 # verified during audit (calibrated/ browse images)
+  # Official split label files (columns: filepath class_id). Verified during audit.
+  split_files:
+    train: "train-set-v2.1.txt"
+    val: "val-set-v2.1.txt"
+    test: "test-set-v2.1.txt"
+  class_map: "class_map.csv"              # verified during audit; fallback: msl_synset_words-indexed.txt
+  num_classes: 19
+  image_size_native: 256                  # ~256x256 browse images
+  channels_expected: 3                    # RGB browse products; verified during audit
+  # Instruments encoded in filenames (Mastcam L/R, MAHLI); parsed during audit.
+  instruments: ["mastcam_left", "mastcam_right", "mahli"]
+  # Sol boundaries are READ FROM THE DATA, never hard-coded. This is documentation only.
+  sol_split_note: "chronological by sol; boundaries verified from label files during audit"
+  # MSL train set ships augmented (5920 rows = 2000 originals + 3920 augmented); val/test are clean.
+  # Originals-only recovery (one image per base product) reproduces the paper's exact 2,900-image
+  # benchmark. Verified against the real files this session.
+  originals_only: true
+  expected_originals_counts:
+    train: 2000
+    val: 300
+    test: 600
+    total: 2900
+  aug_marker_suffixes: ["-r90", "-r180", "-r270", "-fh", "-fv", "-brt"]
+  # Leakage policy (user decision): the official v2.1 split contains 3 test 'Artifact' images that are
+  # pixel-identical to 2 train images. Drop the offending TRAIN copies so the official 600-image test
+  # set stays intact and no test image has a train twin. Deterministic; applied by src/data/msl.py.
+  dedup_train_against_eval: true
+
+# Documented-only (NOT used for the primary comparison).
+msl_v1_secondary:
+  name: MSL_v1
+  full_name: "Mars surface image (Curiosity rover) labeled data set version 1"
+  zenodo_record: "1049137"
+  num_classes: 24
+  images: 6691
+  status: "documented-only; excluded from the primary comparison"

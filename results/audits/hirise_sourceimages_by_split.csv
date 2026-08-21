@@ -1,0 +1,4 @@
+split,n_source_images
+test,30
+train,152
+val,50

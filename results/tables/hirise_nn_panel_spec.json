@@ -1,0 +1,161 @@
+{
+  "model": "clip",
+  "spec": [
+    {
+      "query_path": "data/hirise/extracted/hirise-map-proj-v3_2/map-proj-v3_2/ESP_017001_1805_RED-0134.jpg",
+      "query_label": "other",
+      "neighbors": [
+        {
+          "path": "data/hirise/extracted/hirise-map-proj-v3_2/map-proj-v3_2/PSP_010021_1835_RED-0113.jpg",
+          "label": "other"
+        },
+        {
+          "path": "data/hirise/extracted/hirise-map-proj-v3_2/map-proj-v3_2/PSP_002572_1520_RED-0025.jpg",
+          "label": "other"
+        },
+        {
+          "path": "data/hirise/extracted/hirise-map-proj-v3_2/map-proj-v3_2/PSP_010021_1835_RED-0016.jpg",
+          "label": "other"
+        },
+        {
+          "path": "data/hirise/extracted/hirise-map-proj-v3_2/map-proj-v3_2/ESP_011881_1585_RED-0269.jpg",
+          "label": "other"
+        },
+        {
+          "path": "data/hirise/extracted/hirise-map-proj-v3_2/map-proj-v3_2/PSP_008932_1645_RED-0125.jpg",
+          "label": "other"
+        }
+      ]
+    },
+    {
+      "query_path": "data/hirise/extracted/hirise-map-proj-v3_2/map-proj-v3_2/ESP_018192_1985_RED-0259.jpg",
+      "query_label": "other",
+      "neighbors": [
+        {
+          "path": "data/hirise/extracted/hirise-map-proj-v3_2/map-proj-v3_2/ESP_017770_1990_RED-0128.jpg",
+          "label": "other"
+        },
+        {
+          "path": "data/hirise/extracted/hirise-map-proj-v3_2/map-proj-v3_2/ESP_017770_1990_RED-0104.jpg",
+          "label": "other"
+        },
+        {
+          "path": "data/hirise/extracted/hirise-map-proj-v3_2/map-proj-v3_2/ESP_017770_1990_RED-0093.jpg",
+          "label": "other"
+        },
+        {
+          "path": "data/hirise/extracted/hirise-map-proj-v3_2/map-proj-v3_2/ESP_017770_1990_RED-0289.jpg",
+          "label": "other"
+        },
+        {
+          "path": "data/hirise/extracted/hirise-map-proj-v3_2/map-proj-v3_2/ESP_017770_1990_RED-0266.jpg",
+          "label": "other"
+        }
+      ]
+    },
+    {
+      "query_path": "data/hirise/extracted/hirise-map-proj-v3_2/map-proj-v3_2/ESP_018192_1985_RED-0292.jpg",
+      "query_label": "other",
+      "neighbors": [
+        {
+          "path": "data/hirise/extracted/hirise-map-proj-v3_2/map-proj-v3_2/ESP_017770_1990_RED-0273.jpg",
+          "label": "other"
+        },
+        {
+          "path": "data/hirise/extracted/hirise-map-proj-v3_2/map-proj-v3_2/ESP_017770_1990_RED-0207.jpg",
+          "label": "other"
+        },
+        {
+          "path": "data/hirise/extracted/hirise-map-proj-v3_2/map-proj-v3_2/ESP_017770_1990_RED-0305.jpg",
+          "label": "other"
+        },
+        {
+          "path": "data/hirise/extracted/hirise-map-proj-v3_2/map-proj-v3_2/PSP_004118_1355_RED-0083.jpg",
+          "label": "other"
+        },
+        {
+          "path": "data/hirise/extracted/hirise-map-proj-v3_2/map-proj-v3_2/ESP_017770_1990_RED-0087.jpg",
+          "label": "other"
+        }
+      ]
+    },
+    {
+      "query_path": "data/hirise/extracted/hirise-map-proj-v3_2/map-proj-v3_2/PSP_008027_2070_RED-0229.jpg",
+      "query_label": "other",
+      "neighbors": [
+        {
+          "path": "data/hirise/extracted/hirise-map-proj-v3_2/map-proj-v3_2/ESP_016572_1875_RED-0006.jpg",
+          "label": "other"
+        },
+        {
+          "path": "data/hirise/extracted/hirise-map-proj-v3_2/map-proj-v3_2/ESP_025050_1680_RED-0046.jpg",
+          "label": "other"
+        },
+        {
+          "path": "data/hirise/extracted/hirise-map-proj-v3_2/map-proj-v3_2/ESP_019133_1975_RED-0028.jpg",
+          "label": "other"
+        },
+        {
+          "path": "data/hirise/extracted/hirise-map-proj-v3_2/map-proj-v3_2/PSP_001481_1875_RED-0382.jpg",
+          "label": "other"
+        },
+        {
+          "path": "data/hirise/extracted/hirise-map-proj-v3_2/map-proj-v3_2/PSP_010021_1835_RED-0112.jpg",
+          "label": "other"
+        }
+      ]
+    },
+    {
+      "query_path": "data/hirise/extracted/hirise-map-proj-v3_2/map-proj-v3_2/ESP_018815_2570_RED-0009.jpg",
+      "query_label": "dark dune",
+      "neighbors": [
+        {
+          "path": "data/hirise/extracted/hirise-map-proj-v3_2/map-proj-v3_2/ESP_036217_2580_RED-0008.jpg",
+          "label": "dark dune"
+        },
+        {
+          "path": "data/hirise/extracted/hirise-map-proj-v3_2/map-proj-v3_2/ESP_016631_2535_RED-0118.jpg",
+          "label": "bright dune"
+        },
+        {
+          "path": "data/hirise/extracted/hirise-map-proj-v3_2/map-proj-v3_2/ESP_018299_2245_RED-0412.jpg",
+          "label": "impact ejecta"
+        },
+        {
+          "path": "data/hirise/extracted/hirise-map-proj-v3_2/map-proj-v3_2/ESP_019011_2245_RED-0552.jpg",
+          "label": "impact ejecta"
+        },
+        {
+          "path": "data/hirise/extracted/hirise-map-proj-v3_2/map-proj-v3_2/ESP_036217_2580_RED-0010.jpg",
+          "label": "other"
+        }
+      ]
+    },
+    {
+      "query_path": "data/hirise/extracted/hirise-map-proj-v3_2/map-proj-v3_2/PSP_008965_1510_RED-0350.jpg",
+      "query_label": "other",
+      "neighbors": [
+        {
+          "path": "data/hirise/extracted/hirise-map-proj-v3_2/map-proj-v3_2/ESP_028329_1350_RED-0161.jpg",
+          "label": "other"
+        },
+        {
+          "path": "data/hirise/extracted/hirise-map-proj-v3_2/map-proj-v3_2/ESP_017541_1600_RED-0555.jpg",
+          "label": "other"
+        },
+        {
+          "path": "data/hirise/extracted/hirise-map-proj-v3_2/map-proj-v3_2/ESP_027802_1685_RED-0168.jpg",
+          "label": "other"
+        },
+        {
+          "path": "data/hirise/extracted/hirise-map-proj-v3_2/map-proj-v3_2/ESP_017770_1990_RED-0509.jpg",
+          "label": "other"
+        },
+        {
+          "path": "data/hirise/extracted/hirise-map-proj-v3_2/map-proj-v3_2/ESP_016151_1445_RED-0059.jpg",
+          "label": "other"
+        }
+      ]
+    }
+  ]
+}

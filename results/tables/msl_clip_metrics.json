@@ -1,0 +1,55 @@
+{
+  "dataset": "msl",
+  "model": "clip",
+  "checkpoint": "hf:openai/clip-vit-base-patch16",
+  "embedding_dim": 512,
+  "classifier": "Logistic (multinomial, L2)",
+  "best_params": {
+    "C": 0.1,
+    "class_weight": "balanced",
+    "val_macro_f1": 0.7016285274319942
+  },
+  "metrics": {
+    "accuracy": 0.7616666666666667,
+    "balanced_accuracy": 0.6326131712054717,
+    "macro_f1": 0.5949619168147425,
+    "weighted_f1": 0.7652274815356481,
+    "macro_precision": 0.6132104016928399,
+    "macro_recall": 0.6326131712054717,
+    "baseline_most_common_acc": 0.31166666666666665,
+    "ece": 0.059630903477166264
+  },
+  "ci": {
+    "macro_f1": {
+      "point": 0.5949619168147425,
+      "ci_low": 0.5092733182025706,
+      "ci_high": 0.6456372200759635,
+      "boot_mean": 0.5807978763965204,
+      "boot_std": 0.03403394679816283
+    },
+    "balanced_accuracy": {
+      "point": 0.6326131712054717,
+      "ci_low": 0.5597964219296895,
+      "ci_high": 0.7158595135242822,
+      "boot_mean": 0.6379141066641315,
+      "boot_std": 0.04006263199289699
+    },
+    "accuracy": {
+      "point": 0.7616666666666667,
+      "ci_low": 0.7266666666666667,
+      "ci_high": 0.7950416666666664,
+      "boot_mean": 0.76127,
+      "boot_std": 0.017478983888595406
+    },
+    "weighted_f1": {
+      "point": 0.7652274815356481,
+      "ci_low": 0.7287895122565665,
+      "ci_high": 0.8000145792702588,
+      "boot_mean": 0.7647521673060048,
+      "boot_std": 0.0180044835791566
+    }
+  },
+  "n_train": 1998,
+  "n_val": 300,
+  "n_test": 600
+}

@@ -1,0 +1,4 @@
+instrument,test,train,val
+mahli,163,479,85
+mastcam_left,222,841,108
+mastcam_right,215,678,107

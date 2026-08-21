@@ -1,0 +1,47 @@
+# Classifier configuration
+# Same classifier family applied identically to every representation (fairness rule §10).
+
+seed: 42
+
+primary:
+  kind: logistic_regression
+  display_name: "Logistic (multinomial, L2)"
+  # sklearn LogisticRegression(penalty='l2', solver='lbfgs', multi_class='multinomial')
+  solver: "lbfgs"
+  max_iter: 5000
+  # Feature standardization fit on TRAIN only, applied to val/test.
+  standardize: true
+  # Hyperparameter grid - selected by VALIDATION Macro-F1 ONLY. Test never used for selection.
+  grid:
+    C: [0.001, 0.01, 0.1, 1, 10, 100]
+    class_weight: [null, "balanced"]
+  selection_metric: "macro_f1"
+  selection_split: "val"
+  # Final model trained on TRAIN only with the selected hyperparameters; evaluated once on TEST.
+  final_train_split: "train"
+
+# Optional secondary classifiers (§14) - run only after the primary is complete; do not block it.
+secondary:
+  enabled: false
+  linear_svm:
+    kind: linear_svc
+    C: [0.001, 0.01, 0.1, 1, 10, 100]
+  knn:
+    kind: knn
+    n_neighbors: [1, 5, 10, 20]
+    metric: "cosine"
+
+evaluation:
+  primary_metric: "macro_f1"
+  secondary_metrics: ["balanced_accuracy", "accuracy", "weighted_f1"]
+  bootstrap:
+    enabled: true
+    n_resamples: 2000
+    confidence: 0.95
+    # Fixed resample indices shared across models -> paired difference CIs.
+    paired: true
+  calibration:
+    compute_ece: true
+    n_bins: 15
+    # Abstention is NOT applied in the primary comparison (§20); recorded separately only.
+    abstention_in_primary: false

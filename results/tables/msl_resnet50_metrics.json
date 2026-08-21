@@ -1,0 +1,55 @@
+{
+  "dataset": "msl",
+  "model": "resnet50",
+  "checkpoint": "torchvision:ResNet50_Weights.IMAGENET1K_V1",
+  "embedding_dim": 2048,
+  "classifier": "Logistic (multinomial, L2)",
+  "best_params": {
+    "C": 10,
+    "class_weight": "balanced",
+    "val_macro_f1": 0.7239158667927613
+  },
+  "metrics": {
+    "accuracy": 0.7433333333333333,
+    "balanced_accuracy": 0.5999299563133684,
+    "macro_f1": 0.5579556365572561,
+    "weighted_f1": 0.7380608751407585,
+    "macro_precision": 0.5987453267422285,
+    "macro_recall": 0.5999299563133684,
+    "baseline_most_common_acc": 0.31166666666666665,
+    "ece": 0.2069294025425233
+  },
+  "ci": {
+    "macro_f1": {
+      "point": 0.5579556365572561,
+      "ci_low": 0.4945356996713669,
+      "ci_high": 0.6066382282258422,
+      "boot_mean": 0.5498864417663298,
+      "boot_std": 0.028950578926696148
+    },
+    "balanced_accuracy": {
+      "point": 0.5999299563133684,
+      "ci_low": 0.5360227307725829,
+      "ci_high": 0.6667006461910449,
+      "boot_mean": 0.6022721137834152,
+      "boot_std": 0.03394009763042855
+    },
+    "accuracy": {
+      "point": 0.7433333333333333,
+      "ci_low": 0.7066666666666667,
+      "ci_high": 0.7783333333333333,
+      "boot_mean": 0.7428591666666666,
+      "boot_std": 0.01808617948032266
+    },
+    "weighted_f1": {
+      "point": 0.7380608751407585,
+      "ci_low": 0.6977495273709095,
+      "ci_high": 0.7748887559139687,
+      "boot_mean": 0.7373695783369392,
+      "boot_std": 0.019559633201860334
+    }
+  },
+  "n_train": 1998,
+  "n_val": 300,
+  "n_test": 600
+}

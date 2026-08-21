@@ -1,0 +1,28 @@
+# Data & derived artifacts (large; reproducible from scripts)
+data/
+embeddings/
+*.h5
+*.hdf5
+*.npy
+*.npz
+*.parquet
+
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+
+# OS / editor
+.DS_Store
+*.swp
+
+# Logs (keep the dir, ignore contents except .gitkeep)
+results/logs/*
+!results/logs/.gitkeep
+
+# Model/HF caches if placed locally
+.cache/
+hf_cache/
+torch_cache/

@@ -1,0 +1,55 @@
+{
+  "dataset": "msl",
+  "model": "dinov2",
+  "checkpoint": "hf:facebook/dinov2-base",
+  "embedding_dim": 768,
+  "classifier": "Logistic (multinomial, L2)",
+  "best_params": {
+    "C": 0.01,
+    "class_weight": null,
+    "val_macro_f1": 0.7554809534302989
+  },
+  "metrics": {
+    "accuracy": 0.795,
+    "balanced_accuracy": 0.6275505030032403,
+    "macro_f1": 0.5977330870661816,
+    "weighted_f1": 0.7823962255894688,
+    "macro_precision": 0.6349276851914117,
+    "macro_recall": 0.6275505030032403,
+    "baseline_most_common_acc": 0.31166666666666665,
+    "ece": 0.04401227164547605
+  },
+  "ci": {
+    "macro_f1": {
+      "point": 0.5977330870661816,
+      "ci_low": 0.5259211776086249,
+      "ci_high": 0.6662822546065399,
+      "boot_mean": 0.5974994519007262,
+      "boot_std": 0.03637890506174331
+    },
+    "balanced_accuracy": {
+      "point": 0.6275505030032403,
+      "ci_low": 0.5580066710618566,
+      "ci_high": 0.7083144672980295,
+      "boot_mean": 0.632591907972454,
+      "boot_std": 0.039069081269264755
+    },
+    "accuracy": {
+      "point": 0.795,
+      "ci_low": 0.7616666666666667,
+      "ci_high": 0.8266666666666667,
+      "boot_mean": 0.7944175,
+      "boot_std": 0.016523413501755624
+    },
+    "weighted_f1": {
+      "point": 0.7823962255894688,
+      "ci_low": 0.7442477952520844,
+      "ci_high": 0.8180816565215189,
+      "boot_mean": 0.7815950677268861,
+      "boot_std": 0.017984097039716675
+    }
+  },
+  "n_train": 1998,
+  "n_val": 300,
+  "n_test": 600
+}
